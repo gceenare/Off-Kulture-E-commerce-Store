@@ -1,5 +1,5 @@
-import { apiClient, handleApiResponse, handleApiError, ApiResponse } from './api';
-import { Product, ProductReview } from '../App';
+import { apiClient, handleApiResponse, handleApiError, ApiResponse } from './index';
+import { Product, ProductReview } from '../AppWithApi';
 
 export interface ProductFilters {
   category?: string;
@@ -71,7 +71,7 @@ export class ProductService {
   // Search products
   static async searchProducts(
     query: string,
-    params?: Omit<ProductSearchParams, 'filters'>
+    params?: ProductSearchParams
   ): Promise<PaginatedProductsResponse> {
     try {
       const response = await apiClient.get<ApiResponse<PaginatedProductsResponse>>(

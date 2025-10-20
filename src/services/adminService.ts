@@ -1,6 +1,6 @@
 import { apiClient, handleApiResponse, handleApiError, ApiResponse } from './api';
 
-import { User, Product, Order } from '../App';
+import type { User, Product, Order } from '../AppWithApi';
 
 export interface DashboardStats {
   totalRevenue: number;
@@ -53,7 +53,7 @@ export interface InventoryAlert {
   productName: string;
   currentStock: number;
   threshold: number;
-  status: 'low' | 'out' | 'critical';
+  status?: 'low' | 'out' | 'critical';
   lastRestocked?: string;
   daysSinceLastRestock?: number;
 }

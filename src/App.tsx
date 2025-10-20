@@ -1,16 +1,16 @@
-// import React, { useState, useEffect } from 'react';
-// import { toast } from 'sonner@2.0.3';
-// import { Toaster } from './components/ui/sonner';
-// import { Button } from './components/ui/button';
-// import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card';
-// import { Input } from './components/ui/input';
-// import { Label } from './components/ui/label';
-// import { Badge } from './components/ui/badge';
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
+import React, {useState, useEffect} from 'react';
+import { toast } from 'sonner';
+import { Toaster } from './components/ui/sonner';
+import { Button } from './components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card';
+import { Input } from './components/ui/input';
+import { Label } from './components/ui/label';
+import { Badge } from './components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 // import { ShoppingBag, User, Search, Menu, LogOut, Heart, Star, Plus, Minus, Trash2, Phone, Mail, MapPin, Facebook, Instagram, Twitter, CreditCard, Truck, Shield, Clock, ChevronLeft, ChevronRight, UserPlus, Eye, EyeOff, Package, Users, TrendingUp, AlertTriangle, Edit, Save, X, Settings, BarChart3, Filter, SortAsc, SortDesc, Grid, List, Share2, Download, Upload, Bell, Zap, Sparkles, Target, Gift, Award, ArrowUpDown, RefreshCw, Camera, Calendar, MapIcon, MessageSquare, ThumbsUp, Bookmark, ShoppingCart } from 'lucide-react';
 // import offKultureLogo from 'figma:asset/1a23457adff6a2bd33e6862f1377f368003170a1.png';
 //
-// // Interfaces
+// /!**!/// Interfaces
 // export interface Product {
 //   id: string;
 //   name: string;
@@ -1049,7 +1049,7 @@
 //         </Button>
 //
 //         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-//           {/* Product Images */}
+//           {/!* Product Images *!/}
 //           <div className="space-y-4">
 //             <div className="aspect-square bg-muted rounded-lg overflow-hidden">
 //               <img
@@ -1073,7 +1073,7 @@
 //             </div>
 //           </div>
 //
-//           {/* Product Info */}
+//           {/!* Product Info *!/}
 //           <div className="space-y-6">
 //             <div>
 //               <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
@@ -1220,7 +1220,7 @@
 //
 //     return (
 //       <>
-//         {/* Top announcement bar */}
+//         {/!* Top announcement bar *!/}
 //         <div className="bg-primary text-primary-foreground text-center py-2 text-sm">
 //           Free shipping on orders over R500 | 30-day returns | Authentic South African fashion
 //         </div>
@@ -1228,7 +1228,7 @@
 //         <header className="border-b bg-white/95 backdrop-blur-sm supports-[backdrop-filter]:bg-white/60 sticky top-0 z-40">
 //           <div className="container mx-auto px-4">
 //             <div className="flex h-16 items-center justify-between gap-4">
-//               {/* Logo */}
+//               {/!* Logo *!/}
 //               <div
 //                 className="cursor-pointer flex items-center gap-2"
 //                 onClick={() => handleNavigate('home')}
@@ -1245,7 +1245,7 @@
 //                 </span>
 //               </div>
 //
-//               {/* Advanced Search Bar */}
+//               {/!* Advanced Search Bar *!/}
 //               <div className="hidden md:flex flex-1 max-w-2xl mx-4">
 //                 <div className="relative w-full">
 //                   <div className="flex items-center gap-2">
@@ -1290,7 +1290,7 @@
 //                     </Button>
 //                   </div>
 //
-//                   {/* Advanced Search Filters */}
+//                   {/!* Advanced Search Filters *!/}
 //                   {showSearchFilters && (
 //                     <Card className="absolute top-full left-0 right-0 mt-2 z-50 shadow-xl border-green-200 bg-white">
 //                       <CardContent className="p-4">
@@ -1373,7 +1373,7 @@
 //                 </div>
 //               </div>
 //
-//               {/* Desktop Navigation */}
+//               {/!* Desktop Navigation *!/}
 //               <nav className="hidden lg:flex items-center space-x-6">
 //                 {navItems.map((item) => (
 //                   <Button
@@ -1405,9 +1405,9 @@
 //                 </div>
 //               </nav>
 //
-//               {/* Actions - Optimized for space */}
+//               {/!* Actions - Optimized for space *!/}
 //               <div className="flex items-center gap-1">
-//                 {/* Comparison Badge - Desktop only */}
+//                 {/!* Comparison Badge - Desktop only *!/}
 //                 {comparisonItems.length > 0 && (
 //                   <Button
 //                     variant="ghost"
@@ -1423,7 +1423,7 @@
 //                   </Button>
 //                 )}
 //
-//                 {/* Notifications - Desktop only */}
+//                 {/!* Notifications - Desktop only *!/}
 //                 {notifications.length > 0 && isAdmin && (
 //                   <Button
 //                     variant="ghost"
@@ -1438,7 +1438,7 @@
 //                   </Button>
 //                 )}
 //
-//                 {/* User Profile - Desktop only */}
+//                 {/!* User Profile - Desktop only *!/}
 //                 {user && (
 //                   <Button
 //                     variant="ghost"
@@ -1452,7 +1452,7 @@
 //                   </Button>
 //                 )}
 //
-//                 {/* Track Orders - Desktop only */}
+//                 {/!* Track Orders - Desktop only *!/}
 //                 <Button
 //                   variant="ghost"
 //                   size="sm"
@@ -1464,7 +1464,7 @@
 //                   <span className="hidden xl:inline ml-1">Track</span>
 //                 </Button>
 //
-//                 {/* Wishlist - Always visible */}
+//                 {/!* Wishlist - Always visible *!/}
 //                 <Button
 //                   variant="ghost"
 //                   size="sm"
@@ -1480,7 +1480,7 @@
 //                   )}
 //                 </Button>
 //
-//                 {/* Cart - Always visible */}
+//                 {/!* Cart - Always visible *!/}
 //                 <Button
 //                   variant="ghost"
 //                   size="sm"
@@ -1496,7 +1496,7 @@
 //                   )}
 //                 </Button>
 //
-//                 {/* Logout/Login - Desktop only */}
+//                 {/!* Logout/Login - Desktop only *!/}
 //                 {user ? (
 //                   <Button
 //                     variant="ghost"
@@ -1519,7 +1519,7 @@
 //                   </Button>
 //                 )}
 //
-//                 {/* Mobile menu button - Always visible on mobile */}
+//                 {/!* Mobile menu button - Always visible on mobile *!/}
 //                 <Button
 //                   variant="ghost"
 //                   size="sm"
@@ -1532,12 +1532,12 @@
 //               </div>
 //             </div>
 //
-//             {/* Mobile Navigation */}
+//             {/!* Mobile Navigation *!/}
 //             {mobileMenuOpen && (
 //               <div className="lg:hidden border-t bg-white/95 backdrop-blur-sm">
 //                 <div className="px-4 py-3 max-h-[80vh] overflow-y-auto">
 //                   <div className="space-y-3">
-//                     {/* Mobile Search */}
+//                     {/!* Mobile Search *!/}
 //                     <div className="relative">
 //                       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
 //                       <Input
@@ -1555,7 +1555,7 @@
 //                       />
 //                     </div>
 //
-//                     {/* Navigation Items */}
+//                     {/!* Navigation Items *!/}
 //                     <div className="grid grid-cols-2 gap-2">
 //                       {navItems.map((item) => (
 //                         <Button
@@ -1573,7 +1573,7 @@
 //                       ))}
 //                     </div>
 //
-//                     {/* Quick Actions */}
+//                     {/!* Quick Actions *!/}
 //                     <div className="border-t pt-2">
 //                       <div className="grid grid-cols-2 gap-2 mb-2">
 //                         <Button
@@ -1617,7 +1617,7 @@
 //                       )}
 //                     </div>
 //
-//                     {/* More Items - Compact */}
+//                     {/!* More Items - Compact *!/}
 //                     <div className="border-t pt-2">
 //                       <div className="grid grid-cols-2 gap-1">
 //                         {moreItems.slice(0, 4).map((item) => (
@@ -1637,7 +1637,7 @@
 //                       </div>
 //                     </div>
 //
-//                     {/* Auth Actions - Fixed Height */}
+//                     {/!* Auth Actions - Fixed Height *!/}
 //                     <div className="border-t pt-2">
 //                       {!user ? (
 //                         <Button
@@ -1768,7 +1768,7 @@
 //
 //     return (
 //       <div className="container mx-auto px-4 py-4 md:py-8">
-//         {/* Enhanced Header with Controls */}
+//         {/!* Enhanced Header with Controls *!/}
 //         <div className="mb-6 md:mb-8">
 //           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
 //             <div>
@@ -1787,9 +1787,9 @@
 //               </div>
 //             </div>
 //
-//             {/* View and Sort Controls */}
+//             {/!* View and Sort Controls *!/}
 //             <div className="flex items-center gap-3">
-//               {/* View Mode Toggle */}
+//               {/!* View Mode Toggle *!/}
 //               <div className="flex items-center border rounded-lg p-1">
 //                 <Button
 //                   variant={viewMode === 'grid' ? 'default' : 'ghost'}
@@ -1809,7 +1809,7 @@
 //                 </Button>
 //               </div>
 //
-//               {/* Sort Controls */}
+//               {/!* Sort Controls *!/}
 //               <div className="flex items-center gap-2">
 //                 <select
 //                   className="text-sm border rounded-md px-3 py-1"
@@ -1831,7 +1831,7 @@
 //                 </Button>
 //               </div>
 //
-//               {/* Filters Toggle */}
+//               {/!* Filters Toggle *!/}
 //               <Button
 //                 variant="outline"
 //                 size="sm"
@@ -1844,7 +1844,7 @@
 //             </div>
 //           </div>
 //
-//           {/* Advanced Filters Panel */}
+//           {/!* Advanced Filters Panel *!/}
 //           {showFilters && (
 //             <Card className="mb-6 shadow-lg border-green-200">
 //               <CardContent className="p-6">
@@ -1920,7 +1920,7 @@
 //           )}
 //         </div>
 //
-//         {/* Product Grid/List */}
+//         {/!* Product Grid/List *!/}
 //         <div className={viewMode === 'grid'
 //           ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
 //           : "space-y-4"
@@ -1934,7 +1934,7 @@
 //             >
 //               <CardContent className={viewMode === 'grid' ? "p-4" : "p-0"}>
 //                 <div className={viewMode === 'grid' ? "space-y-3" : "flex gap-6 items-center"}>
-//                   {/* Product Image */}
+//                   {/!* Product Image *!/}
 //                   <div className={`${viewMode === 'grid' ? 'aspect-square' : 'w-32 h-32'} bg-muted rounded-lg overflow-hidden relative group`}>
 //                     <img
 //                       src={product.image}
@@ -1943,7 +1943,7 @@
 //                       onClick={() => handleProductClick(product)}
 //                     />
 //
-//                     {/* Product Badges */}
+//                     {/!* Product Badges *!/}
 //                     <div className="absolute top-2 left-2 space-y-1">
 //                       {product.isNew && (
 //                         <Badge className="bg-green-600 text-white text-xs animate-pulse">
@@ -1957,7 +1957,7 @@
 //                       )}
 //                     </div>
 //
-//                     {/* Quick Actions */}
+//                     {/!* Quick Actions *!/}
 //                     <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 space-y-1">
 //                       <Button
 //                         variant="secondary"
@@ -2004,7 +2004,7 @@
 //                     </div>
 //                   </div>
 //
-//                   {/* Product Details */}
+//                   {/!* Product Details *!/}
 //                   <div className={`${viewMode === 'grid' ? 'space-y-2' : 'flex-1 space-y-2'}`}>
 //                     <div>
 //                       <h3 className="font-semibold text-lg line-clamp-2 hover:text-green-600 transition-colors">
@@ -2013,7 +2013,7 @@
 //                       <p className="text-sm text-muted-foreground line-clamp-2">{product.description}</p>
 //                     </div>
 //
-//                     {/* Rating */}
+//                     {/!* Rating *!/}
 //                     {product.rating && (
 //                       <div className="flex items-center gap-2">
 //                         {renderStarRating(product.rating)}
@@ -2025,7 +2025,7 @@
 //                       </div>
 //                     )}
 //
-//                     {/* Price */}
+//                     {/!* Price *!/}
 //                     <div className="flex items-center gap-2">
 //                       <span className="text-xl font-bold text-green-600">
 //                         R{product.price.toFixed(2)}
@@ -2037,7 +2037,7 @@
 //                       )}
 //                     </div>
 //
-//                     {/* Stock and Actions */}
+//                     {/!* Stock and Actions *!/}
 //                     <div className="flex justify-between items-center">
 //                       <div className="flex items-center gap-2">
 //                         <Badge
@@ -2064,7 +2064,7 @@
 //                       </Button>
 //                     </div>
 //
-//                     {/* Brand and Material (List view only) */}
+//                     {/!* Brand and Material (List view only) *!/}
 //                     {viewMode === 'list' && (
 //                       <div className="flex gap-4 text-xs text-muted-foreground">
 //                         <span>Brand: {product.brand}</span>
@@ -2078,7 +2078,7 @@
 //           ))}
 //         </div>
 //
-//         {/* Enhanced Empty State */}
+//         {/!* Enhanced Empty State *!/}
 //         {filteredProducts.length === 0 && (
 //           <div className="text-center py-16">
 //             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center">
@@ -2111,7 +2111,7 @@
 //           </div>
 //         )}
 //
-//         {/* Recently Viewed Products */}
+//         {/!* Recently Viewed Products *!/}
 //         {recentlyViewed.length > 0 && (
 //           <Card className="mt-12 border-green-200">
 //             <CardHeader>
@@ -2296,7 +2296,7 @@
 //
 //     return (
 //       <div className="container mx-auto px-4 py-8">
-//         {/* CVV Verification Dialog */}
+//         {/!* CVV Verification Dialog *!/}
 //         {showCvvDialog && (
 //           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[70] flex items-center justify-center p-4"
 //                style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}>
@@ -2379,7 +2379,7 @@
 //
 //         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 //           <div className="lg:col-span-2 space-y-6">
-//             {/* Step indicator */}
+//             {/!* Step indicator *!/}
 //             <div className="flex items-center space-x-4 mb-8">
 //               {[1, 2, 3].map((stepNum) => (
 //                 <div key={stepNum} className="flex items-center">
@@ -2396,7 +2396,7 @@
 //               ))}
 //             </div>
 //
-//             {/* Step 1: Shipping Information */}
+//             {/!* Step 1: Shipping Information *!/}
 //             {step === 1 && (
 //               <Card>
 //                 <CardHeader>
@@ -2512,7 +2512,7 @@
 //               </Card>
 //             )}
 //
-//             {/* Step 2: Payment Method */}
+//             {/!* Step 2: Payment Method *!/}
 //             {step === 2 && (
 //               <Card>
 //                 <CardHeader>
@@ -2704,7 +2704,7 @@
 //               </Card>
 //             )}
 //
-//             {/* Step 3: Order Review */}
+//             {/!* Step 3: Order Review *!/}
 //             {step === 3 && (
 //               <Card>
 //                 <CardHeader>
@@ -2752,7 +2752,7 @@
 //             )}
 //           </div>
 //
-//           {/* Order Summary */}
+//           {/!* Order Summary *!/}
 //           <div className="lg:col-span-1">
 //             <Card className="sticky top-20">
 //               <CardHeader>
@@ -2787,7 +2787,7 @@
 //                   </div>
 //                 </div>
 //
-//                 {/* Security Features */}
+//                 {/!* Security Features *!/}
 //                 <div className="border-t pt-4">
 //                   <div className="bg-green-50 p-3 rounded-lg">
 //                     <h4 className="font-medium text-green-800 mb-2 flex items-center gap-2">
@@ -2815,7 +2815,7 @@
 //                   </div>
 //                 </div>
 //
-//                 {/* Payment Methods Accepted */}
+//                 {/!* Payment Methods Accepted *!/}
 //                 <div className="border-t pt-4">
 //                   <h4 className="font-medium mb-2">We Accept</h4>
 //                   <div className="grid grid-cols-2 gap-2 text-xs">
@@ -3587,7 +3587,7 @@
 //
 //     const AdminOverview = () => (
 //       <div className="space-y-6">
-//         {/* Stats Grid */}
+//         {/!* Stats Grid *!/}
 //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 //           <Card>
 //             <CardContent className="p-6">
@@ -3638,7 +3638,7 @@
 //           </Card>
 //         </div>
 //
-//         {/* Recent Orders */}
+//         {/!* Recent Orders *!/}
 //         <Card>
 //           <CardHeader>
 //             <CardTitle>Recent Orders</CardTitle>
@@ -3674,7 +3674,7 @@
 //           </CardContent>
 //         </Card>
 //
-//         {/* Low Stock Alert */}
+//         {/!* Low Stock Alert *!/}
 //         {lowStockProducts.length > 0 && (
 //           <Card className="border-orange-200 bg-orange-50">
 //             <CardHeader>
@@ -3729,7 +3729,7 @@
 //             </Button>
 //           </div>
 //
-//           {/* Category Filter */}
+//           {/!* Category Filter *!/}
 //           <Card className="bg-blue-50/50 border-blue-200">
 //             <CardHeader>
 //               <CardTitle className="flex items-center gap-2">
@@ -3790,7 +3790,7 @@
 //               </p>
 //             </CardHeader>
 //             <CardContent className="space-y-4">
-//               {/* Basic Information */}
+//               {/!* Basic Information *!/}
 //               <div className="space-y-4">
 //                 <h4 className="font-medium text-green-800 flex items-center gap-2">
 //                   <Package className="h-4 w-4" />
@@ -3850,7 +3850,7 @@
 //                 </div>
 //               </div>
 //
-//               {/* Media Section */}
+//               {/!* Media Section *!/}
 //               <div className="space-y-4">
 //                 <h4 className="font-medium text-green-800 flex items-center gap-2">
 //                   <Camera className="h-4 w-4" />
@@ -3887,7 +3887,7 @@
 //                 </div>
 //               </div>
 //
-//               {/* Product Details */}
+//               {/!* Product Details *!/}
 //               <div className="space-y-4">
 //                 <h4 className="font-medium text-green-800 flex items-center gap-2">
 //                   <Edit className="h-4 w-4" />
@@ -3906,7 +3906,7 @@
 //                 </div>
 //               </div>
 //
-//               {/* Smart Features */}
+//               {/!* Smart Features *!/}
 //               <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg border border-blue-200">
 //                 <h4 className="font-medium text-blue-800 mb-2 flex items-center gap-2">
 //                   <Zap className="h-4 w-4" />
@@ -3932,7 +3932,7 @@
 //                 </div>
 //               </div>
 //
-//               {/* Action Buttons */}
+//               {/!* Action Buttons *!/}
 //               <div className="flex gap-3 pt-4 border-t">
 //                 <Button
 //                   onClick={handleAddProduct}
@@ -4287,7 +4287,7 @@
 //
 //     return (
 //       <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
-//         {/* Admin Header */}
+//         {/!* Admin Header *!/}
 //         <header className="border-b bg-white/95 backdrop-blur-sm sticky top-0 z-40">
 //           <div className="container mx-auto px-4">
 //             <div className="flex h-16 items-center justify-between">
@@ -4325,7 +4325,7 @@
 //         </header>
 //
 //         <div className="container mx-auto px-4 py-6">
-//           {/* Navigation Tabs */}
+//           {/!* Navigation Tabs *!/}
 //           <div className="mb-6">
 //             <nav className="flex space-x-6 border-b bg-white/50 -mx-4 px-4 pb-0">
 //               {[
@@ -4354,7 +4354,7 @@
 //             </nav>
 //           </div>
 //
-//           {/* Tab Content */}
+//           {/!* Tab Content *!/}
 //           {activeTab === 'overview' && <AdminOverview />}
 //           {activeTab === 'products' && <ProductManagement />}
 //           {activeTab === 'orders' && <OrderManagement />}
@@ -4730,7 +4730,7 @@
 //               </CardContent>
 //             </Card>
 //
-//             {/* Danger Zone */}
+//             {/!* Danger Zone *!/}
 //             <Card className="border-red-200 bg-red-50">
 //               <CardHeader>
 //                 <CardTitle className="text-red-800 flex items-center gap-2">
@@ -4753,7 +4753,7 @@
 //               </CardContent>
 //             </Card>
 //
-//             {/* Delete Confirmation Dialog */}
+//             {/!* Delete Confirmation Dialog *!/}
 //             {showDeleteDialog && (
 //               <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[70] flex items-center justify-center p-4">
 //                 <Card className="w-full max-w-md shadow-2xl border-2 border-red-200">
@@ -5264,7 +5264,7 @@
 //                         </Badge>
 //                       </div>
 //
-//                       {/* Order Items */}
+//                       {/!* Order Items *!/}
 //                       <div className="mb-4">
 //                         <h4 className="font-medium mb-2">Items ({order.items.length}):</h4>
 //                         <div className="space-y-2">
@@ -5277,7 +5277,7 @@
 //                         </div>
 //                       </div>
 //
-//                       {/* Order Summary */}
+//                       {/!* Order Summary *!/}
 //                       <div className="border-t pt-4">
 //                         <div className="flex justify-between items-center">
 //                           <div className="text-sm space-y-1">
@@ -5293,7 +5293,7 @@
 //                         </div>
 //                       </div>
 //
-//                       {/* Status Progress */}
+//                       {/!* Status Progress *!/}
 //                       <div className="mt-4 pt-4 border-t">
 //                         <div className="flex items-center justify-between">
 //                           <div className={`flex items-center gap-2 ${order.status === 'Processing' || order.status === 'Shipped' || order.status === 'Delivered' ? 'text-green-600' : 'text-muted-foreground'}`}>
@@ -5363,7 +5363,7 @@
 //             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 //               {comparisonItems.map((product) => (
 //                 <div key={product.id} className="space-y-4">
-//                   {/* Product Image */}
+//                   {/!* Product Image *!/}
 //                   <div className="relative">
 //                     <div className="aspect-square bg-muted rounded-lg overflow-hidden">
 //                       <img
@@ -5382,7 +5382,7 @@
 //                     </Button>
 //                   </div>
 //
-//                   {/* Product Details */}
+//                   {/!* Product Details *!/}
 //                   <div className="space-y-3">
 //                     <h3 className="font-semibold text-lg">{product.name}</h3>
 //
@@ -5444,7 +5444,7 @@
 //                       )}
 //                     </div>
 //
-//                     {/* Action Buttons */}
+//                     {/!* Action Buttons *!/}
 //                     <div className="space-y-2">
 //                       <Button
 //                         onClick={() => addToCart(product)}
@@ -5489,11 +5489,11 @@
 //         <main className="flex-1">
 //           {renderCurrentPage()}
 //         </main>
-//         {/* Enhanced Footer */}
+//         {/!* Enhanced Footer *!/}
 //         <footer className="border-t bg-muted/30 mt-auto">
 //           <div className="container mx-auto px-4 py-8 md:py-12">
 //             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-//               {/* Company Info */}
+//               {/!* Company Info *!/}
 //               <div className="space-y-4">
 //                 <div className="flex items-center gap-2">
 //                   <div className="h-10 w-10 rounded-lg overflow-hidden bg-white shadow-sm">
@@ -5524,7 +5524,7 @@
 //                 </div>
 //               </div>
 //
-//               {/* Quick Links */}
+//               {/!* Quick Links *!/}
 //               <div className="space-y-4">
 //                 <h3 className="font-semibold">Quick Links</h3>
 //                 <div className="space-y-2">
@@ -5548,7 +5548,7 @@
 //                 </div>
 //               </div>
 //
-//               {/* Customer Service */}
+//               {/!* Customer Service *!/}
 //               <div className="space-y-4">
 //                 <h3 className="font-semibold">Customer Service</h3>
 //                 <div className="space-y-2">
@@ -5570,7 +5570,7 @@
 //                 </div>
 //               </div>
 //
-//               {/* Contact Info */}
+//               {/!* Contact Info *!/}
 //               <div className="space-y-4">
 //                 <h3 className="font-semibold">Contact Info</h3>
 //                 <div className="space-y-3">
@@ -5594,7 +5594,7 @@
 //               </div>
 //             </div>
 //
-//             {/* Bottom Section */}
+//             {/!* Bottom Section *!/}
 //             <div className="border-t mt-8 pt-8">
 //               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
 //                 <p className="text-sm text-muted-foreground">
@@ -5614,10 +5614,10 @@
 //         </footer>
 //       </div>
 //
-//       {/* Enhanced Modals and Overlays */}
+//       {/!* Enhanced Modals and Overlays *!/}
 //       <ProductComparisonModal />
 //
-//       {/* Enhanced Toaster */}
+//       {/!* Enhanced Toaster *!/}
 //       <Toaster
 //         position="top-right"
 //         toastOptions={{
@@ -5642,7 +5642,7 @@
 //         }}
 //       />
 //
-//       {/* Loading Overlay for Search */}
+//       {/!* Loading Overlay for Search *!/}
 //       {isSearching && (
 //         <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[45] flex items-center justify-center p-4">
 //           <Card className="p-6 shadow-xl border-2 border-green-200">
@@ -5654,7 +5654,7 @@
 //         </div>
 //       )}
 //
-//       {/* Smart Notification Banner */}
+//       {/!* Smart Notification Banner *!/}
 //       {notifications.length > 0 && isAdmin && (
 //         <div className="fixed bottom-4 right-4 z-[50] space-y-2 max-w-sm">
 //           {notifications.slice(0, 3).map((notification, index) => (

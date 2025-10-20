@@ -1,5 +1,5 @@
-import { apiClient, handleApiResponse, handleApiError, ApiResponse } from './api';
-import { Order, CartItem } from '../App';
+import { apiClient, handleApiResponse, handleApiError, ApiResponse } from '../App';
+import { Order, CartItem } from '../AppWithApi';
 
 export interface CreateOrderData {
   items: CartItem[];
