@@ -1,4 +1,33 @@
 {
   "compilerOptions": {
-    "target": "ES0"
-  }}
+    "target": "ES0",
+
+
+
+
+
+
+    "compilerOptions": {
+      "target": "ES2017",
+      // Choose a modern JavaScript target
+      "module": "ESNext",
+      // Suitable for bundlers like Vite/Webpack
+      "jsx": "react-jsx",
+      // Enable JSX transform compatible with React 17+
+      "moduleResolution": "Node",
+      // Standard module resolution
+      "strict": true,
+      // (Optional) enable strict type-checking
+      "esModuleInterop": true,
+      // Improve CommonJS/ESM interoperability
+      "skipLibCheck": true
+      // Speed up builds by skipping .d.ts checks
+    },
+    "include": [
+      "src"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
+}

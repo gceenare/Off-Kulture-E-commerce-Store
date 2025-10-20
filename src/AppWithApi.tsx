@@ -4,8 +4,8 @@ import { Toaster } from './components/ui/sonner';
 import { Button } from './components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card';
 import { Input } from './components/ui/input';
-import { Label } from './components/ui/label
-';
+import { Label } from './components/ui/label';
+
 import { Badge } from './components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 import { ShoppingBag, User, Search, Menu, LogOut, Heart, Star, Plus, Minus, Trash2, Phone, Mail, MapPin, Facebook, Instagram, Twitter, CreditCard, Truck, Shield, Clock, ChevronLeft, ChevronRight, UserPlus, Eye, EyeOff, Package, Users, TrendingUp, AlertTriangle, Edit, Save, X, Settings, BarChart3, Filter, SortAsc, SortDesc, Grid, List, Share2, Download, Upload, Bell, Zap, Sparkles, Target, Gift, Award, ArrowUpDown, RefreshCw, Camera, Calendar, MapIcon, MessageSquare, ThumbsUp, Bookmark, ShoppingCart } from 'lucide-react';
@@ -3186,8 +3186,8 @@ export default function AppWithApi() {
                       </>
                     )}
                   </div>
-                ))}
-              ) : (
+                  ()</>
+
                 <div className="text-center py-12">
                   <Package className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
                   <h3 className="text-lg font-medium mb-2">
@@ -3211,7 +3211,7 @@ export default function AppWithApi() {
                     )}
                   </div>
                 </div>
-              )}
+              }
             </div>
           </CardContent>
         </Card>
@@ -4727,4 +4727,4 @@ export default function AppWithApi() {
       )}
     </>
   );
-}
+}}
